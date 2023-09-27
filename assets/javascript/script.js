@@ -17,10 +17,21 @@ const questions = [
         ]
     },
     // Add more questions here
+    {
+        question: "What is a ReadMe.md",
+        answers: [
+            { text: "A) A Readme.md file.", correct: false },
+            { text: "B) A File for notes.", correct: false },
+            { text: "C) Empty File", correct: false },
+            { text: "D) A file to leave behind mark downs.", correct: true}
+        ]
+    },
+
+    
 ];
 
 let currentQuestionIndex = 0;
-let timeLeft = 30; // Set the quiz duration in seconds
+let timeLeft = 60; // Set the quiz duration in seconds
 let timer;
 
 const startButton = document.getElementById("start-button");
