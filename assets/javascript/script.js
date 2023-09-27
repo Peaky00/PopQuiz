@@ -1,4 +1,4 @@
-// Define quiz questions and answers
+// Questions and Answers
 const questions = [
     {
         question: "What does HTML stand for?",
@@ -16,7 +16,7 @@ const questions = [
             { text: "C) Creative Style Sheets", correct: false }
         ]
     },
-    // Add more questions here
+
     {
         question: "What is a ReadMe.md",
         answers: [
@@ -49,7 +49,7 @@ submitButton.addEventListener("click", saveScore);
 
 function startQuiz() {
     startButton.disabled = true;
-    timer = setInterval(updateTimer, 1000);
+    timer = setInterval(updateTimer, 1000); //Updates timer by 1 second.
     showQuestion();
 }
 
@@ -73,7 +73,7 @@ function selectAnswer(selectedAnswer) {
         resultElement.textContent = "Correct!";
     } else {
         resultElement.textContent = "Incorrect. The correct answer is: " + correctAnswer.text;
-        timeLeft -= 10; // Subtract 10 seconds for incorrect answers
+        timeLeft -= 20; // Subtract 20 seconds for incorrect answers
     }
 
     currentQuestionIndex++;
